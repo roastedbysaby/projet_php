@@ -1,0 +1,203 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.contact-us-nav {
+    display: flex;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer p {
+    background-color: black;
+}
+
+.footer i {
+    font-size: 2em;
+    margin: 0 10px;
+}
+
+.logo-section {
+    display: flex;
+}
+
+.front-page {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro {
+    max-width: 600px;
+    padding: 50px;
+}
+
+.user-count {
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.join-now {
+    text-align: center;
+}
+
+.ajout-page, .index-page {
+    padding: 50px;
+}
+
+.ajout-form {
+    padding: 30px;
+}
+
+.detail-section {
+    display: flex;
+    gap: 20px;
+}
+
+.coordonate-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    flex: 1;
+}
+
+.coordonate-section input {
+    width: 100%;
+}
+
+.sport-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    flex: 1;
+}
+
+.new-sport-section {
+    display: flex;
+    gap: 5px;
+}
+
+.new-sport-section input {
+    flex: 3;
+}
+
+.new-sport-section button {
+    flex: 1;
+}
+
+.button-section {
+    display: flex;
+    gap: 5px;
+}
+
+.button-section button, .button-section a {
+    flex: 1;
+}
+
+.sports-list-container {
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.id-form {
+    padding: 4%;
+}
+
+.id-form label {
+    display: block;
+}
+
+.id-form a {
+    width: 100%;
+}
+
+.id-section {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.id-section input {
+    flex: 1;
+}
+
+.id-success-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.recherche-form-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.recherche-form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 0px 5px 2px #d8d8d8;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-section label {
+    display: block;
+}
+
+.btn-section {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-section button {
+    flex: 1;
+}
+
+.link-section {
+    display: flex;
+    gap: 20px;
+}
+
+.link-section a {
+    flex: 1;
+}
+
+.result-section {
+    padding: 50px;
+}
