@@ -45,7 +45,6 @@ try {
         <link rel="stylesheet" href="style.css">
     </head>
 
-
     <body>
         <div class="wrapper">
             <header>

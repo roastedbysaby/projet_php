@@ -135,4 +135,55 @@ function get_partners($connection, $filterInput) {
     return $partners_result;
 }
 
+function get_produits($connection) {
+    $produits_array = [];
+    $sql = "SELECT * FROM produits";
+    $produits_result = mysqli_query($connection, $sql);
+    if (mysqli_num_rows($produits_result) > 0) {
+        while ($row = mysqli_fetch_assoc($produits_result)) {
+            $produits_array[] = $row;
+        }
+    }
+    return $produits_array;
+}
+
+function get_cart(array $produits_indexed): array {
+    $panier = [
+        'produits' => [],
+        'sous-total' => 0,
+        'taxe 1' => 0,
+        'taxe 2' => 0,
+        'total' => 0
+    ];
+
+    if (empty($_SESSION['panier'])) {
+        return $panier;
+    }
+
+    foreach ($_SESSION['panier'] as $produitId => $prod) {
+        if (isset($produits_indexed[$produitId])) {
+            $produit = $produits_indexed[$produitId];
+            $produitQty = $prod['quantite'];
+            $prodTotal = $produit['produit_prix'] * $produitQty;
+
+            $panier['produits'][] = [
+                'produit_id' => $produitId,
+                'name' => $produit['produit_name'],
+                'prix' => $produit['produit_prix'],
+                'quantite' => $produitQty,
+                'prodTotal' => $prodTotal
+            ];
+
+            $panier['sous-total'] += $prodTotal;
+        }
+    }
+
+    $taxe1 = $panier['sous-total'] * 0.05;
+    $taxe2 = $panier['sous-total'] * 0.09;
+    $panier['taxe1'] = $taxe1;
+    $panier['taxe2'] = $taxe2;
+    $panier['total'] = $panier['sous-total'] + $taxe1 + $taxe2;
+
+    return $panier;
+}
 ?>

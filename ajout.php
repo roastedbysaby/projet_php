@@ -104,6 +104,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'ajout_sport') {
                         <div class="detail-section mb-5">
                             <div class="coordonate-section">
                                 <h3>Vos coordonees</h3>
+                                
                                 <div>
                                     <input type="text" name="nom" id="nom" value="<?= $user_nom ?>" placeholder="Nom">
                                 </div>
@@ -123,6 +124,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'ajout_sport') {
                             
                             <div class="sport-section">
                                 <h3>Vos pratiques sportives</h3>
+
                                 <select name="sport" id="sport">
                                     <option value="" disabled selected>Choississez votre sport pratique</option>
                                     <?php foreach ($sports_array as $sport) { ?>
@@ -131,11 +133,13 @@ if (isset($_GET['action']) && $_GET['action'] === 'ajout_sport') {
                                         </option>
                                     <?php } ?>
                                 </select>
+
                                 <p>Si votre sport n'est pas dans la liste, ajoutez le ici</p>
                                 <div class="new-sport-section">
                                     <input type="text" name="newSport" id="newSport" placeholder="Ajouter un sport">
                                     <button class="btn btn-secondary" type="submit" name="ajouter" onclick="enableAjouter()">Ajouter</button>
                                 </div>
+
                                 <select name="niveau" id="niveau">
                                     <option value="" disabled selected>Choississez votre niveau</option>
                                     <?php foreach ($niveaux_array as $niveau) { ?>

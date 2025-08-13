@@ -17,9 +17,10 @@
                 <li class="nav-item"><a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.php">Index</a></li>
                 <li class="nav-item"><a class="nav-link" href="ajout.php">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link" href="achat.php">Achat</a></li>
+                <li class="nav-item"><a class="nav-link" href="panier.php">Panier</a></li>
                 <?php if (isset($_SESSION['nom'])) { ?>
                     <li class="nav-item"><a class="nav-link" href="recherche.php">Recherche</a></li>
-                    <li class="nav-item"><a class="nav-link" href="achat.php">Achat</a></li>
                     <li class="nav-item">
                         <form method="POST" action="logout.php">
                             <button class="nav-link" type="submit">Deconnexion</button>
